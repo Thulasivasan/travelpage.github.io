@@ -11,7 +11,7 @@ body{
     background: rgb(255, 255, 255);
     height: 100svh;
     width: 100svw;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 .page-1{
     position: relative;
@@ -25,7 +25,6 @@ a{
     text-decoration: none;
 }
 .nav{
-    /* display: none; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,12 +32,10 @@ a{
     font-family: outfit;
     text-align: center;
     font-weight:bold;
-    /* height: 15vh; */
 }
 .left-nav{
     display: flex;
     align-items: center;
-    /* outline: 2px solid rgb(255, 255, 255); */
 }
 .main-logo{
     flex-grow: .3;
@@ -53,18 +50,14 @@ a{
     align-items: center;
     flex-wrap: wrap;
     height: auto;
-    /* width: 32vw; */
     list-style-type: none;
-    /* outline: 2px solid rgb(255, 255, 255); */
     
 }
 .left-nav ul a,
 .right-nav ul a{
     color: #FFFEFE;
     font-size: clamp(.5rem,1.3rem , 2rem);
-    /* padding: .5rem; */
     transition: all 400ms;
-    /* outline: 2px solid rgb(0, 0, 0); */
 }
 .right-nav ul a{
     box-sizing: content-box;
@@ -106,7 +99,6 @@ a{
     text-align: left;
     height: 77svh;
 
-    /* outline: 2px solid red; */
 }
 .hero p{
     font-family: outfit;
@@ -123,15 +115,6 @@ a{
 .hero :not(div){
     transition: all 400ms;
 }
-/* .hero div:after{
-    content: "";
-    position: absolute;
-    bottom: 50%;
-    left: 70%;
-    background: #ffffff;
-    height: clamp(10px, .1rem, 50rem);
-    width:  clamp(.01rem, 10vw + .5rem, 50rem);
-} */
 .hero div:hover h1{
     margin: .5em;
     cursor: pointer;
@@ -140,44 +123,72 @@ a{
 }
 .page-1-logo{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 20vw;
     align-items:flex-end;
-    color: #ffffff;
-    gap: 1.5em;
-    /* position: absolute; */
-    /* right: calc(50vw - 5rem);
-    bottom: 8vh; */
 }
-@media only screen and (max-width: 500px){
-    .page-1-logo{
-        bottom: 1rem;
+@media only screen and (max-width: 600px){
+
+    .page-1{
+        padding-inline: 3rem;
+    }
+    .left-nav{
+        margin: 0 auto;
+    }
+    .right-nav{
+        margin: 0 auto;
+    }
+    .hero{
+        height: 70%;
+    }
+    .hero div h1{
+        font-size: 2rem;
     }
 }
-@media only screen and (max-width: 450px){
-    .left-nav{
-        position: absolute;
-        top: 0rem;
-        left: 0rem;
+@media only screen and (max-width: 500px){
+    .page-1{
+        padding-inline: 3rem;
+    }
+    .hero{
+        height: 60%;
     }
     .left-nav ul a{
         font-size: 1.2rem;
+        font-weight: 400;
     }
-    .right-nav{
-        position: absolute;
-        top: 5rem;
-        left: 34vw;
-        /* outline: 2px solid red; */
-    }
-    .hero{
-        padding-top: 12rem;
+    .hero div h1{
+        font-size: 2rem;
     }
     .page-1-logo{
-        width: 100%;
-        gap: 6rem;
-        padding-top: 50%;
-        /* bottom: 12vh; */
+        width: 50vw;
+        margin: 20% auto;
     }
 }
+@media only screen and (max-width: 480px){
+    .page-1{
+        padding-inline: 1rem;
+    }
+    .left-nav ul{
+        gap: .2rem;
+    }
+    .page-1-logo{
+        width: 40vw;
+        margin: 10% auto;
+    }
+}
+@media only screen and (max-width: 400px){
+    .page-1{
+        padding-inline: .5rem;
+    }
+    .left-nav ul{
+        gap: .3rem;
+    }
+    .left-nav ul a{
+        font-size: 1rem;
+    }
+}
+
 .page-2{
     position: relative;
     height: 100vh;
@@ -206,7 +217,6 @@ a{
     flex-wrap: wrap;
     align-items:center;
     padding-block: 1rem;
-    /* outline: 2px solid red; */
     gap: 1rem;
     z-index: 2;
 }
@@ -215,23 +225,15 @@ a{
     font-size: clamp(2.5rem, 12vw + 1rem, 10rem);
     color: #8A8A8A;
     margin: 0;
-    /* padding: .5rem; */
     letter-spacing: .05em;
 }
 .left .small-text{
     font-family: outfit;
-    /* font-size: 1.125rem; */
     font-size: clamp(.5rem, 1.1rem, 5rem);
     color: #8A8A8A;
-    /* width: fit-content; */
     width: clamp(18rem, 28vw + .5rem, 100rem);
     font-weight: 600;
-    /* padding-bottom: 1rem; */
     
-}
-*{
-    
-    /* outline:  2px solid red; */
 }
 .right{
     display: flex;
@@ -242,30 +244,25 @@ a{
     list-style-type: none;
     z-index: 2;
     width: max-content;
-    /* outline: 1px solid rgb(255, 0, 0); */
     padding: 1em;
     
     
 }
 .right a{
-    /* position: relative; */
+    position: relative;
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: clamp(12px, 1rem, 5rem);
     font-family: outfit;
     font-weight: 600;
-    /* padding-left:3.5em; */
-    /* margin-left: 3rem; */
     padding-bottom: 1em;
-    /* outline: 1px solid blue; */
 }
-/* .right:after{
+.right:after{
     content: "";
     position: absolute;
     bottom: 0px;
-    left: 3rem;
     height: .15em;
-    width: calc(100% - 3rem);
+    width: 100%;
     background: rgb(255, 255, 255);
 }
 .right a::after{
@@ -277,7 +274,7 @@ a{
     height: .2em;
     width: 100%;
     background:#D20E44;
-} */
+}
 .right a:hover{
     color: #D20E44;
 }
@@ -286,39 +283,20 @@ a{
     z-index: 2;
 }
 .page-2-cards{
-    /* position: relative;
-    display: flex;
-    outline: 2px solid red;
-    flex-wrap: wrap;
-    width: calc(100vw - 10rem);
-    margin-inline: auto;
-    justify-content: space-between;
-    gap: auto;
-    padding-top: 1rem;
-    z-index: 3; */
-
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
 }
-.card{
-    /* display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 35rem;
-    width: clamp(2rem, 16vw + 1rem, 50rem);
-    transition: transform 400ms; */
-    
-    
+.card{    
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     width: 20%;
     align-items: center;
     height: 500px;
-    /* border-radius: 20px; */
     border-radius:4.2rem 4.2rem 3.5rem 3.5rem ;
     z-index: 2;
     background-repeat: no-repeat;
@@ -349,14 +327,6 @@ a{
     padding-bottom: 1em;
     letter-spacing: .1em;
 }
-.card-text{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    gap: 5.2em;
-    bottom: 0;
-    width: 100%;
-}
 /* RESPONSİVE */
 
 @media only screen and (max-width: 1000px) {
@@ -372,60 +342,103 @@ a{
         margin-bottom: 3rem;
     }  
 }
-@media only screen and (max-width: 700px){
-    .card {
-        width: 35%;
-        height: 20rem;
-      } 
-}
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
     
+    .page-2{
+        padding-inline: 1rem;
+    }
+    .left{
+        margin: 0 auto;
+    }
+    .left .small-text{
+        text-align: center;
+        flex-grow: 1;
+    }
     .card {
-      width: 70%;
-      height: 25rem;
+        width: 70%;
+        height: 25rem;
     }  
     .right{
-        position: absolute;
-        top: 3rem;
-        right: 4rem;
-        width: 10vw;
-    }
+        margin: 0 auto;
+        width: max-content;
+        gap: .5rem;
+    } 
+    .card,.inside-text{
+        position: relative;
+        width: 60%;
+        height: 25rem;
+        transition: all 500ms;
+    } 
     .card-topic{
         font-size: 1rem;
     }
-  }
-  @media only screen and (max-width: 450px){
-    .card {
-        width: 90%;
-        height: 20rem;
-      }  
-      .right{
+    .page-2-cards{
+        margin:  0 auto;
+        width: 70%;
+    }
+    .page-2-cards .card:hover .inside-text{
+        transition-delay: 200ms;
+        font-size: 1rem;
+    }
+    .page-2-cards .card:hover .hover-text{
+        transition-delay: 400ms;
+        opacity: 1;
+    }
+    .page-2-cards .card:hover{
+        width: 30%;
+        margin-right: 70%;
+        transform: translate(0);
+    }
+    .page-2-cards .card:hover .card-topic{
         display: none;
-      }
-  }
-/* .inside-text{
-    opacity: 0;
-    font-family: outfit;
-    font-size: .8rem;
-    display: inline-block;
-    text-align:justify;
-    font-weight: 600;
-    padding-inline: auto ;
-    margin-inline:auto;
-    transition: all 400ms;
-    transition-delay: 200ms;
-} */
-/* .page-2-cards:hover .inside-text{
-    opacity: 1;
+    }
+    .inside-text{
+        width: 45vw;
+        height: 100%;
+        position: absolute;
+        left: 110%;
+        top: 10%;
+        font-family: outfit;
+        color: white;
+        font-size: 0px;
+        text-align: center;
+        font-weight: 600;
+    }
+    .hover-text{
+        opacity: 0;
+        width: 45vw;
+        position: absolute;
+        left: 110%;
+        bottom: 10%;
+        font-family: outfit;
+        color:#D20E44;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 600;
+    }
+    .hover-text{
+        transition: all 400ms;
+    }
 }
-.inside-text::after{
-    content: "view more "url("images/page-2-arrow.svg");
-    color: #D20E44;
-} */
-
+  @media only screen and (max-width: 500px){
+    
+    .right:after{
+        display: none;
+    }.card {
+        position: relative;
+        width: 60%;
+        height: 20rem;
+    }  
+    .left .big-text,.small-text{
+            margin: 0 auto;
+    }
+    .right{
+        font-size:.1rem ;
+    }
+  }
 .page-3{
     position: relative;
-    height: 100svh;
+    height: 100vh;
     padding-inline: 5em;
     background-image: url("images/page-3-bg.jpg");
     background-repeat: no-repeat;
@@ -446,23 +459,20 @@ a{
     align-items: flex-end;
     height: 65svh;
     width: 100%;
-    /* outline: 2px solid red; */
 }
 .card-3-1,
 .card-3-2{
     
-    /* outline: 3px solid blue; */
     width: 30%;
     height: 80%;
     z-index: 2;
     border-radius: 1rem;
 }
 .card-3-1{
-    /* flex-grow: 1; */
     color: #000;
     background: #fff;
     font-weight: 700;
-    text-align: justify;
+    text-align: left;
     font-size: clamp(1rem, 1vw + .5rem, 8rem);
     font-family: outfit;
     height: auto;
@@ -509,24 +519,21 @@ a{
         width: 90%;
         text-align: left;
         font-size: 1.2rem;
-        /* align-self: flex-start; */
     }
     .card-3-2{
         height: 50%;
         width: 90%;
-        /* align-self: center; */
     }
 }
 @media only screen and (max-width: 500px){
     .page-3-cards{
         height: 87%;
-        padding-top: 5rem;
+        padding-top: 1rem;
     }
     .page-3-text{
         padding-top: 2rem;
     }
     .card-3-1{
-        text-align: justify;
         width: 60%;
         font-size: 1rem;
         padding: .8rem;
