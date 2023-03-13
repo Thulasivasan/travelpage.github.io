@@ -36,11 +36,12 @@ a{
 .left-nav{
     display: flex;
     align-items: center;
+    transform-origin: top;
+    transition: scale 400ms ease-in-out;
 }
-.main-logo{
-    flex-grow: .3;
+/* .main-logo{
     justify-self: flex-start;
-}
+} */
 .left-nav ul,
 .right-nav ul{
     display: flex;
@@ -106,7 +107,7 @@ a{
     font-size:0.75rem;
     text-shadow: 0 0 3px #fff;
 }
-.hero h1{
+.hero h1 a{
     letter-spacing: .1em;
     font-family: Bebas Neue;
     margin: 0;
@@ -128,64 +129,62 @@ a{
     width: 20vw;
     align-items:flex-end;
 }
+#check,label{
+    display: none;
+}
 @media only screen and (max-width: 600px){
-
     .page-1{
-        padding-inline: 3rem;
+        padding: 0 10vw;
+        padding-top: 1rem;
+    }
+    .left-nav ul a{
+        all: unset;
+    } 
+    label{
+        display: block;
+        color: #fff;
+    }
+    #check:checked ~ .left-nav{
+       scale: 1 0;
+    }
+    .nav{
+        position: fixed;
+        background-color: rgba(38, 36, 36, .2);
+        width: 80vw;
+        padding: .5rem 1rem;
+        margin: 0 auto;
+        border-radius: 100vw;
+        z-index: 999;
     }
     .left-nav{
-        margin: 0 auto;
+        position: absolute;
+        right: 5%;
+        top: 110%;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 90%;
+        justify-content: flex-end;
+        transform: scale(1, 1);
+        border-radius: 1rem;
+        padding: 0 1rem;
     }
-    .right-nav{
-        margin: 0 auto;
+    .left-nav ul{
+        flex-direction: column;
+        align-items: flex-end;
     }
+    .right-nav ul{
+        margin:  auto auto;
+    }   
     .hero{
+        padding-top: 45%;
         height: 70%;
     }
     .hero div h1{
         font-size: 2rem;
     }
-}
-@media only screen and (max-width: 500px){
-    .page-1{
-        padding-inline: 3rem;
-    }
-    .hero{
-        height: 60%;
-    }
-    .left-nav ul a{
-        font-size: 1.2rem;
-        font-weight: 400;
-    }
-    .hero div h1{
-        font-size: 2rem;
-    }
     .page-1-logo{
-        width: 50vw;
-        margin: 20% auto;
-    }
-}
-@media only screen and (max-width: 480px){
-    .page-1{
-        padding-inline: 1rem;
-    }
-    .left-nav ul{
-        gap: .2rem;
-    }
-    .page-1-logo{
-        width: 40vw;
-        margin: 10% auto;
-    }
-}
-@media only screen and (max-width: 400px){
-    .page-1{
-        padding-inline: .5rem;
-    }
-    .left-nav ul{
-        gap: .3rem;
-    }
-    .left-nav ul a{
-        font-size: 1rem;
+        gap: 5vw;
+        padding-top:40% ;
     }
 }
 
