@@ -296,7 +296,7 @@ a{
     width: 20%;
     align-items: center;
     height: 500px;
-    border-radius:4.2rem 4.2rem 3.5rem 3.5rem ;
+    border-radius:4.2rem 4.2rem ;
     z-index: 2;
     background-repeat: no-repeat;
     background-size: cover;
@@ -307,16 +307,16 @@ a{
     transform: translateY(-6vh);
 }
 .card:nth-child(1){
-    background-image: url("images/page-2-card-1.jpg");
+    background-image: url("images/page-2-card-1.png");
 }
 .card:nth-child(2){
-    background-image: url("images/page-2-card-2.jpg");
+    background-image: url("images/page-2-card-2.png");
 }
 .card:nth-child(3){
-    background-image: url("images/page-2-card-3.jpg");
+    background-image: url("images/page-2-card-3.png");
 }
 .card:nth-child(4){
-    background-image: url("images/page-2-card-4.jpg");
+    background-image: url("images/page-2-card-4.png");
 }
 .card-topic{
     color: #E1E1E1;
@@ -461,11 +461,10 @@ a{
 }
 .card-3-1,
 .card-3-2{
-    
     width: 30%;
     height: 80%;
     z-index: 2;
-    border-radius: 1rem;
+    border-radius: 1rem ;
 }
 .card-3-1{
     color: #000;
@@ -479,7 +478,7 @@ a{
 }
 .card-3-2{
     align-self: flex-start;
-    background-image: url("images/page-3-card-image.jpg");
+    background-image: url("images/page-3-card-image.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
